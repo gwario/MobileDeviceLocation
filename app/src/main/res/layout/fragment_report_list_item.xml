@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/fragment_report_list_item_root"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_alignParentStart="true"
+        android:id="@+id/fragment_report_list_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="placeholder"
+        android:layout_margin="@dimen/text_margin"
+        android:textAppearance="?attr/textAppearanceListItem"/>
+
+        <LinearLayout
+            android:id="@+id/fragment_report_list_item_indicators"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/fragment_report_list_item_title"
+            android:gravity="center_vertical|fill|center_horizontal"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/fragment_report_list_item_gps_finished"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/indicator_data_margin_end"
+                android:src="@drawable/ic_gps_not_fixed_black_24dp"/>
+            <ImageView
+                android:id="@+id/fragment_report_list_item_mls_finished"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/indicator_data_margin_end"
+                android:src="@drawable/ic_cloud_download_black_24dp"/>
+            <ImageView
+                android:id="@+id/fragment_report_list_item_wificell_finished"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/indicator_data_margin_end"
+                android:src="@drawable/ic_signal_cellular_null_black_24dp"/>
+        </LinearLayout>
+
+    <TextView
+        android:id="@+id/fragment_report_list_item_deviation"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="1234"
+        android:layout_toEndOf="@id/fragment_report_list_item_indicators"
+        android:layout_toStartOf="@id/fragment_report_list_item_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+        <ProgressBar
+            android:layout_alignParentEnd="true"
+            android:id="@id/fragment_report_list_item_loading"
+            android:indeterminate="true"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/indicator_data_margin_end"/>
+
+</RelativeLayout>

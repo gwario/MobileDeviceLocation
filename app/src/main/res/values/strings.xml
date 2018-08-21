@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">DeviceLocation</string>
+    <string name="title_report_detail">Report Detail</string>
+
+    <string name="device_location_account">DeviceLocation Account</string>
+
+    <string name="toast_database_decrypt_failed">Wrong password! Try it again.</string>
+
+    <string name="dialog_database_decrypt_title">Decrypt</string>
+    <string name="dialog_database_decrypt_text">Enter your password.</string>
+    <string name="dialog_database_password_hint">Password</string>
+
+    <string name="dialog_database_encrypt_title">Encrypt</string>
+    <string name="dialog_database_encrypt_text">Choose a password.</string>
+
+    <string name="dialog_database_positive_label">OK</string>
+    <string name="dialog_database_negative_label">Cancel</string>
+
+    <string name="menu_encrypt_reports">Encrypt Reports</string>
+    <string name="menu_delete_all_reports">Delete all reports</string>
+
+    <string name="datetime_format">yyyy-MM-dd HH:mm:ss</string>
+
+    <string name="dialog_delete_button_yes">Yes</string>
+    <string name="dialog_delete_button_cancel">Cancel</string>
+    <string name="dialog_delete_title">Delete</string>
+    <string name="dialog_delete_message">Are you sure?</string>
+
+    <string name="mail_subject">Report from %1$s</string>
+
+    <string name="fragment_report_detail_loading_text">Loading report...</string>
+    <string name="fragment_report_detail_label_gps">GPS data</string>
+    <string name="fragment_report_detail_label_mls">MLS data</string>
+    <string name="fragment_report_detail_label_accuracy">Accuracy[m]:</string>
+    <string name="fragment_report_detail_label_latitude">Latitude:</string>
+    <string name="fragment_report_detail_label_longitude">Longitude:</string>
+    <string name="fragment_report_detail_label_mls_number_wifi"># of Wifis:</string>
+    <string name="fragment_report_detail_label_mls_number_cell"># of Cells:</string>
+    <string name="fragment_report_detail_label_mls_request">MLS request:</string>
+    <string name="fragment_report_detail_label_mls_response">MLS response:</string>
+    <string name="fragment_report_detail_label_deviation">Deviation[m]:</string>
+</resources>

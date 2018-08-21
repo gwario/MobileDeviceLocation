@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="at.ameise.devicelocation"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          android:installLocation="internalOnly">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- uses-permission android:name="com.android.alarm.permission.SET_ALARM"/ -->
+    <!-- uses-permission android:name="android.permission.GET_ACCOUNTS"/ -->
+    <!-- uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/ -->
+    <application
+        android:name=".DeviceLocation"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_gps_fixed_black_48dp"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.LauncherActivity"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait"/>
+
+        <service
+            android:name=".service.CellAndWifiScanService"
+            android:exported="false"/>
+        <service
+            android:name=".service.GeolocateApiAccessService"
+            android:exported="false"/>
+        <service
+            android:name=".service.GPSLocationService"
+            android:exported="false"/>
+
+        <!--
+        service
+            android:name=".service.AuthenticatorService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator"/>
+        </service
+        -->
+        <service
+            android:name=".service.CleanUpService"
+            android:exported="false">
+        </service>
+
+    </application>
+
+</manifest>
